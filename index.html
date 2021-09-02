@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Book Archive Website</title>
+    <!-- bootstrap cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    #error-handel {
+      display: none;
+    }
+    #spinner {
+      display: none;
+    }
+  </style>
+  <body class="bg-light">
+    <!-- search box start here -->
+    <section class="container">
+      <div class="input-group my-4 w-50 mx-auto">
+        <input
+          id="search-input"
+          type="text"
+          class="form-control"
+          placeholder="Search your favourite book"
+        />
+        <button
+          onclick="loadData()"
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+        >
+          Search
+        </button>
+      </div>
+    </section>
+    <!-- search box end here -->
+    <div
+      id="result-found"
+      class="text-success text-center pb-4 fs-2 fw-bold"
+    ></div>
+
+    <!-- show error message -->
+    <div id="error" class="text-center text-danger fs-2 fw-bold"></div>
+
+    <!-- when loading data showing spiners -->
+    <div id="spinner" class="text-center">
+      <div class="spinner-grow" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <!--  -->
+    <div id="error-handel" class="text-center text-danger fs-2 fw-bold">
+      Search item didn't match
+    </div>
+    <!-- start search result container  -->
+    <section class="container">
+      <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </section>
+    <!-- end search result container  -->
+    <!-- main js file here -->
+    <script src="./main.js"></script>
+  </body>
+</html>
